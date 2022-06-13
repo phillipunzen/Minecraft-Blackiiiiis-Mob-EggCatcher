@@ -1,0 +1,7 @@
+name: BlackMobEggCatcher
+version: '${project.version}'
+main: de.phillipunzen.blackmobeggcatcher.Blackmobeggcatcher
+api-version: 1.18
+authors: [ Blackiiiii ]
+description: allows to catch mobs with throws eggs.
+website: https://phillipunzen.de/
