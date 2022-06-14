@@ -12,18 +12,32 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 //Überprüft die Konfiguration. Falls die Konfiguration älter ist, wird diese Ersetzt mit der aktuellen Konfiguration.
 public class ConfigChecker {
-    private final double configVersion;
+    private final double fileConfigVersion;
+    private final double configVersion = 1.0;
     FileConfiguration config;
-    JavaPlugin plugin;
 
-    public ConfigChecker()
+    //Überprüfe die Version der Konfigurationsdatei
+    public ConfigChecker(JavaPlugin plugin)
     {
-        configVersion = plugin.getConfig().getDouble("ConfigurationVersion", 0.0);
-        if (configVersion == 1.0)
+
+        fileConfigVersion = plugin.getConfig().getDouble("ConfigurationVersion", 0.0);
+        if (fileConfigVersion == configVersion)
         {
             plugin.saveConfig();
         } else {
             plugin.saveResource("config.yml", true);
         }
+    }
+
+    //Überprüft ob Konfigurationsdatei vorhanden ist, und gibt dann den entsprechenden bool Wert zurück.
+    public boolean isConfigFileCorrect()
+    {
+        if(fileConfigVersion == configVersion)
+        {
+            return true;
+        } else {
+            return false;
+        }
+
     }
 }

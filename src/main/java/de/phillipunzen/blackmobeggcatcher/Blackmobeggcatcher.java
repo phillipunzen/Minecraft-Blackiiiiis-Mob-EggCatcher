@@ -7,6 +7,8 @@ Contact: development@phillipunzen.de
 
 package de.phillipunzen.blackmobeggcatcher;
 
+import de.phillipunzen.blackmobeggcatcher.listeners.MobHitByEggListener;
+import de.phillipunzen.blackmobeggcatcher.utils.ConfigChecker;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -24,12 +26,17 @@ public final class Blackmobeggcatcher extends JavaPlugin {
     5. Programm Logik generell
      */
 
-
-
-
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        //Überprüfung der Konfigurationsdatei
+        ConfigChecker cchecker = new ConfigChecker(this);
+        if(! (cchecker.isConfigFileCorrect()))
+        {
+            sendLog(ChatColor.RED + "Fehler: Konfigurationsdatei ist fehlerhaft! Plugin wird eventuell nicht fehlerfrei laufen!");
+        }
+
+        //Registriere den Plugin Manager und die Listener zu registrieren
+        getServer().getPluginManager().registerEvents(new MobHitByEggListener(this), this);
         sendLog("Plugin wurde gestartet und aktiviert!");
     }
 

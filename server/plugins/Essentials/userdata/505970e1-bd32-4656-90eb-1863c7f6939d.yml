@@ -1,0 +1,30 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 127.0.0.1
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1655234415558
+  login: 1655239913129
+money: '0'
+last-account-name: Blackiiiii
+logoutlocation:
+  world: 3a3349ae-94de-47c4-b4c0-f99cfafb4aff
+  world-name: world
+  x: 287.30623716749943
+  y: 231.27269497202724
+  z: 29.108459733071395
+  yaw: -78.01970672607422
+  pitch: 41.83354187011719
