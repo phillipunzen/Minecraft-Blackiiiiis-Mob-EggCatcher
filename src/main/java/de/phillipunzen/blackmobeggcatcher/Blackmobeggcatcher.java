@@ -7,6 +7,7 @@ Contact: development@phillipunzen.de
 
 package de.phillipunzen.blackmobeggcatcher;
 
+import de.phillipunzen.blackmobeggcatcher.commands.InfoCommand;
 import de.phillipunzen.blackmobeggcatcher.listeners.MobHitByEggListener;
 import de.phillipunzen.blackmobeggcatcher.utils.ConfigChecker;
 import org.bukkit.Bukkit;
@@ -36,7 +37,7 @@ public final class Blackmobeggcatcher extends JavaPlugin {
         }
 
         //Registriere den Plugin Manager und die Listener zu registrieren
-        getServer().getPluginManager().registerEvents(new MobHitByEggListener(this), this);
+        registerEventsCommands();
         sendLog("Plugin wurde gestartet und aktiviert!");
     }
 
@@ -50,5 +51,11 @@ public final class Blackmobeggcatcher extends JavaPlugin {
     public void sendLog(String message)
     {
         Bukkit.getConsoleSender().sendMessage(PREFIX + message);
+    }
+
+    public void registerEventsCommands()
+    {
+        getServer().getPluginManager().registerEvents(new MobHitByEggListener(this), this);
+        Bukkit.getPluginCommand("eggcatcher").setExecutor(new InfoCommand(this));
     }
 }

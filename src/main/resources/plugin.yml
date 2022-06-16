@@ -5,3 +5,84 @@ api-version: 1.18
 authors: [ Blackiiiii ]
 description: allows to catch mobs with throws eggs.
 website: https://phillipunzen.de/
+commands:
+  eggcatcher:
+    info:
+      description: Much information about the plugin.
+    help:
+      description: Give you help to use this plugin.
+
+permissions:
+  eggcatcher.mob.*:
+    description: You can with this permission catch every mob
+    default: op
+    children:
+      eggcatcher.mob.axolotl: true
+      eggcatcher.mob.bat: true
+      eggcatcher.mob.bee: true
+      eggcatcher.mob.blaze: true
+      eggcatcher.mob.cat: true
+      eggcatcher.mob.cavespider: true
+      eggcatcher.mob.chicken: true
+      eggcatcher.mob.cod: true
+      eggcatcher.mob.cow: true
+      eggcatcher.mob.creeper: true
+      eggcatcher.mob.dolphin: true
+      eggcatcher.mob.donkey: true
+      eggcatcher.mob.drowned: true
+      eggcatcher.mob.elderguardian: true
+      eggcatcher.mob.enderman: true
+      eggcatcher.mob.endermite: true
+      eggcatcher.mob.evoker: true
+      eggcatcher.mob.fox: true
+      eggcatcher.mob.frog: true
+      eggcatcher.mob.ghast: true
+      eggcatcher.mob.glowsquid: true
+      eggcatcher.mob.goat: true
+      eggcatcher.mob.guardian: true
+      eggcatcher.mob.hoglin: true
+      eggcatcher.mob.horse: true
+      eggcatcher.mob.husk: true
+      eggcatcher.mob.lama: true
+      eggcatcher.mob.magmacube: true
+      eggcatcher.mob.mule: true
+      eggcatcher.mob.mushroomcow: true
+      eggcatcher.mob.ocelot: true
+      eggcatcher.mob.panda: true
+      eggcatcher.mob.parrot: true
+      eggcatcher.mob.phantom: true
+      eggcatcher.mob.pig: true
+      eggcatcher.mob.piglin: true
+      eggcatcher.mob.pillager: true
+      eggcatcher.mob.polarbear: true
+      eggcatcher.mob.pufferfish: true
+      eggcatcher.mob.rabbit: true
+      eggcatcher.mob.ravager: true
+      eggcatcher.mob.salmon: true
+      eggcatcher.mob.sheep: true
+      eggcatcher.mob.shulker: true
+      eggcatcher.mob.silverfish: true
+      eggcatcher.mob.skeleton: true
+      eggcatcher.mob.skeletonhorse: true
+      eggcatcher.mob.slime: true
+      eggcatcher.mob.spider: true
+      eggcatcher.mob.squid: true
+      eggcatcher.mob.stray: true
+      eggcatcher.mob.strider: true
+      eggcatcher.mob.tadpole: true
+      eggcatcher.mob.traderlama: true
+      eggcatcher.mob.tropicalfish: true
+      eggcatcher.mob.turtle: true
+      eggcatcher.mob.vex: true
+      eggcatcher.mob.villager: true
+      eggcatcher.mob.vindicator: true
+      eggcatcher.mob.wanderingtrader: true
+      eggcatcher.mob.warden: true
+      eggcatcher.mob.witch: true
+      eggcatcher.mob.witherskeleton: true
+      eggcatcher.mob.wolf: true
+      eggcatcher.mob.zoglin: true
+      eggcatcher.mob.zombie: true
+      eggcatcher.mob.zombiehorse: true
+      eggcatcher.mob.zombievillager: true
+      eggcatcher.mob.zombifiedpiglin: true
